@@ -186,3 +186,19 @@
 | np.percentile | np.nanpercentile | 요소의 순위 기반 백분위 수 계산 |
 | np.any | N/A | 요소 중 참이 있는지 검사 |
 | np.all | N/A | 모든 요소가 참인지 검사 |
+
+# 배열 정렬
+`x = np.array([2,1,4,3,5])` <br>
+- 빠른 정렬 : sort <br>
+`In[19] : np.sort(x) / x.sort(x)` <br>
+`Out[19] : array([1,2,3,4,5])`
+
+- 정렬된 요소의 인덱스 반환 : argsort <br>
+`In[20] : i = np.argsort(x)` <br>
+`Out[20] : [1,0,3,2,4]` <br>
+`In[21] : x[i]` <br>
+`Out[21] : array([1,2,3,4,5])`
+
+- 행/열 기준 정렬
+	- 행 : `np.sort(배열, axis=1)`
+	- 열 : `np.sort(배열, axis=0)`
